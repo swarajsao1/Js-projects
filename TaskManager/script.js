@@ -53,7 +53,7 @@ taskForm.addEventListener("submit", function (event) {
     taskLabel.textContent = taskText;
 
     checkbox.addEventListener("change", function () {
-        textLabel.style.textDecoration = checkbox.checked ? "line-through" : "none";
+        taskLabel.style.textDecoration = checkbox.checked ? "line-through" : "none";
     });
 
     taskList.append(taskItem);
@@ -77,7 +77,7 @@ console.log(tasks[1].text);
 console.log(tasks[1].completed);
 console.log(tasks.map(task => task.completed));
 
-const savedTasks = JSON.stringfy(tasks);
+const savedTasks = JSON.stringify(tasks);
 
 tasks.push({text:"Running", completed:"false"});
 console.log(tasks);
